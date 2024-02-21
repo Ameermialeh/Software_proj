@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DataBase.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">First2022Software</a> &gt; <a href="index.source.html" class="el_package">myPackage</a> &gt; <span class="el_source">DataBase.java</span></div><h1>DataBase.java</h1><pre class="source lang-java linenums">package myPackage;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
+
+public class DataBase {
+
+    public ArrayList&lt;User&gt; users;
+    public ArrayList&lt;Admin&gt; admins;
+
+    public ArrayList&lt;Service&gt; services;
+
+    public ArrayList&lt;Appointment&gt; appointments;
+
+<span class="fc" id="L16">    public DataBase(){</span>
+<span class="fc" id="L17">        users =new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L18">        admins =new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L19">        services=new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L20">        appointments=new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L21">        admins.add(new Admin(&quot;Mosab&quot;,&quot;m123&quot;,&quot;mosabdwaikat@gmail.com&quot;,&quot;0598307602&quot;,&quot;Admin&quot;));</span>
+
+<span class="fc" id="L23">        users.add(new User(&quot;Ameer&quot;,&quot;a123&quot;,&quot;ameer@gmail.com&quot;,&quot;0599123456&quot;,&quot;User&quot;));</span>
+<span class="fc" id="L24">        users.add(new User(&quot;Zayd&quot;,&quot;z123&quot;,&quot;zayd@gmail.com&quot;,&quot;0599333333&quot;,&quot;User&quot;));</span>
+
+
+<span class="fc" id="L27">        appointments.add(new Appointment(1,users.get(0),LocalDate.of(2023,5,14),</span>
+<span class="fc" id="L28">                LocalTime.of(8,0), admins.get(0)));</span>
+<span class="fc" id="L29">        appointments.add(new Appointment(2,users.get(0),LocalDate.of(2023,8,14),</span>
+<span class="fc" id="L30">                LocalTime.of(8,0), admins.get(0)));</span>
+<span class="fc" id="L31">        appointments.add(new Appointment(3,users.get(1),LocalDate.of(2023,5,15),</span>
+<span class="fc" id="L32">                LocalTime.of(8,0), admins.get(0)));</span>
+
+<span class="fc" id="L34">        services.add(new Service(1,&quot;hollywood smile&quot;,500));</span>
+<span class="fc" id="L35">        services.add(new Service(2,&quot;tooth extraction&quot;,420));</span>
+<span class="fc" id="L36">        services.add(new Service(3,&quot;dental implanting&quot;,1200));</span>
+<span class="fc" id="L37">        services.add(new Service(4,&quot;regular checking&quot;,100));</span>
+
+<span class="fc" id="L39">        appointments.get(0).setCheckedIn(true);</span>
+<span class="fc" id="L40">        appointments.get(0).services.add(services.get(0));</span>
+<span class="fc" id="L41">        appointments.get(0).services.add(services.get(2));</span>
+
+<span class="fc" id="L43">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

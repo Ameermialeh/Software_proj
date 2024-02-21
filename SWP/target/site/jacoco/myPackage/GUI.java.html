@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">First2022Software</a> &gt; <a href="index.source.html" class="el_package">myPackage</a> &gt; <span class="el_source">GUI.java</span></div><h1>GUI.java</h1><pre class="source lang-java linenums">package myPackage;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class GUI {
+
+    App app;
+    Scanner scanner;
+
+<span class="fc" id="L13">    public GUI(App app){</span>
+
+<span class="fc" id="L15">        this.app =app;</span>
+<span class="fc" id="L16">        scanner=new Scanner(System.in);</span>
+
+<span class="fc" id="L18">    }</span>
+
+
+
+    int showUserHomeScreen() {
+<span class="nc" id="L23">        System.out.println(&quot;now what mr.customer??&quot;);</span>
+        int choice;
+<span class="nc" id="L25">        String home=&quot;&quot;&quot;</span>
+				***********************************
+				************* WELCOME *************
+				***********************************
+				*What do you want to do?          *
+				*1.Show Appointments              *
+				*2.Log out                        *
+				*3.Exit                           *
+				*4.                               *
+				***********************************
+				&quot;&quot;&quot;;
+<span class="nc" id="L36">        System.out.println(home);</span>
+
+
+        loop:	while(true) {
+
+            try {
+
+<span class="nc" id="L43">                System.out.print(&quot;&gt;&gt;&quot;);</span>
+<span class="nc" id="L44">                int input = Integer.parseInt(scanner.nextLine());</span>
+
+<span class="nc bnc" id="L46" title="All 4 branches missed.">                switch (input) {</span>
+                    case 1 -&gt; {
+<span class="nc" id="L48">                        choice=1;</span>
+<span class="nc" id="L49">                        break loop;</span>
+                    }
+                    case 2 -&gt; {
+<span class="nc" id="L52">                        choice=2;</span>
+<span class="nc" id="L53">                        break loop;</span>
+                    }
+                    case 3 -&gt; {
+<span class="nc" id="L56">                        choice=3;</span>
+<span class="nc" id="L57">                        break loop;</span>
+                    }
+<span class="nc" id="L59">                    default -&gt; System.out.println(&quot;please enter a valid input&quot;);</span>
+                }
+<span class="nc" id="L61">            } catch (InputMismatchException e) {</span>
+
+<span class="nc" id="L63">                System.out.println(&quot;please enter a valid input&quot;);</span>
+
+<span class="nc" id="L65">            }</span>
+
+
+        }
+
+<span class="nc" id="L70">        return choice;</span>
+    }
+
+    int showAdminHomeScreen() {
+<span class="nc" id="L74">        System.out.println(&quot;now what mr.Admin??&quot;);</span>
+<span class="nc" id="L75">        String home=&quot;&quot;&quot;</span>
+				***********************************
+				************* WELCOME *************
+				***********************************
+				*What do you want to do?          *
+				*1.Log out                        *
+				*2.Exit                           *
+				*3.show bookings with me          *
+				***********************************
+				&quot;&quot;&quot;;
+<span class="nc" id="L85">        System.out.println(home);</span>
+
+        int choice;
+
+        loop:	while(true) {
+
+            try {
+
+<span class="nc" id="L93">                System.out.print(&quot;&gt;&gt;&quot;);</span>
+<span class="nc" id="L94">                int input = Integer.parseInt(scanner.nextLine());</span>
+
+<span class="nc bnc" id="L96" title="All 3 branches missed.">                switch (input) {</span>
+                    case 1 -&gt; {
+<span class="nc" id="L98">                        choice=1;</span>
+<span class="nc" id="L99">                        break loop;</span>
+                    }
+                    case 2 -&gt; {
+<span class="nc" id="L102">                        choice=2;</span>
+<span class="nc" id="L103">                        break loop;</span>
+                    }
+<span class="nc" id="L105">                    default -&gt; System.out.println(&quot;please enter a valid input&quot;);</span>
+                }
+<span class="nc" id="L107">            } catch (InputMismatchException e) {</span>
+
+<span class="nc" id="L109">                System.out.println(&quot;please enter a valid input&quot;);</span>
+
+<span class="nc" id="L111">            }</span>
+
+
+        }
+
+<span class="nc" id="L116">        return choice;</span>
+
+    }
+
+    public void showHomeScreen() {
+
+<span class="nc" id="L122">        String home=&quot;&quot;&quot;</span>
+				***********************************
+				************* WELCOME *************
+				***********************************
+				*What do you want to do?          *
+				*1.Login                          *
+				*2.Sign Up                        *
+				*3.                               *
+				***********************************
+				&quot;&quot;&quot;;
+<span class="nc" id="L132">        System.out.println(home);</span>
+
+
+        loop:	while(true) {
+
+            try {
+
+<span class="nc" id="L139">                System.out.print(&quot;&gt;&gt;&quot;);</span>
+<span class="nc" id="L140">                int input = Integer.parseInt(scanner.nextLine());</span>
+
+
+<span class="nc bnc" id="L143" title="All 3 branches missed.">                switch (input) {</span>
+                    case 1 -&gt; {
+
+<span class="nc" id="L146">                        showLoginScreen();</span>
+<span class="nc" id="L147">                        break loop;</span>
+                    }
+                    case 2 -&gt; {
+
+<span class="nc" id="L151">                        showRegisterScreen();</span>
+<span class="nc" id="L152">                        break loop;</span>
+                    }
+<span class="nc" id="L154">                    default -&gt; System.out.println(&quot;please enter a valid input&quot;);</span>
+                }
+<span class="nc" id="L156">            } catch (InputMismatchException e) {</span>
+
+<span class="nc" id="L158">                System.out.println(&quot;please enter a valid input&quot;);</span>
+
+<span class="nc" id="L160">            }</span>
+
+
+        }
+
+
+<span class="nc" id="L166">    }</span>
+
+    private void showRegisterScreen() {
+
+
+        loop: while(true) {
+
+<span class="nc" id="L173">            System.out.println(&quot;enter username:-&quot;);</span>
+<span class="nc" id="L174">            System.out.print(&quot;&gt;&gt;&quot;);</span>
+<span class="nc" id="L175">            String username = scanner.nextLine();</span>
+
+<span class="nc" id="L177">            System.out.println(&quot;enter password:-&quot;);</span>
+<span class="nc" id="L178">            System.out.print(&quot;&gt;&gt;&quot;);</span>
+<span class="nc" id="L179">            String password = scanner.nextLine();</span>
+
+<span class="nc" id="L181">            System.out.println(&quot;enter email:-&quot;);</span>
+<span class="nc" id="L182">            System.out.print(&quot;&gt;&gt;&quot;);</span>
+<span class="nc" id="L183">            String email = scanner.nextLine();</span>
+
+<span class="nc" id="L185">            System.out.println(&quot;enter phone number:-&quot;);</span>
+<span class="nc" id="L186">            System.out.print(&quot;&gt;&gt;&quot;);</span>
+<span class="nc" id="L187">            String phone = scanner.nextLine();</span>
+
+//            User u =new User(username,password,email,phone,&quot;User&quot;);
+
+<span class="nc" id="L191">            String msg = app.attemptRegister(username, password,email,phone);</span>
+<span class="nc bnc" id="L192" title="All 5 branches missed.">            switch (msg) {</span>
+                case &quot;Registration successful&quot; -&gt; {
+<span class="nc" id="L194">                    System.out.println(&quot;Registration successful &quot;);</span>
+<span class="nc" id="L195">                    showHomeScreen();</span>
+<span class="nc" id="L196">                    break loop;</span>
+                }
+<span class="nc" id="L198">                case &quot;used username&quot; -&gt; System.out.println(&quot;username already exists, try again &quot;);</span>
+<span class="nc" id="L199">                case &quot;used email&quot; -&gt; System.out.println(&quot;email already used, try again &quot;);</span>
+<span class="nc" id="L200">                case &quot;used phone number&quot; -&gt; System.out.println(&quot;phone number already used, try again &quot;);</span>
+<span class="nc" id="L201">                default -&gt; throw new IllegalArgumentException(&quot;Unexpected value: &quot; + msg);</span>
+            }
+
+<span class="nc" id="L204">        }</span>
+
+
+
+
+
+<span class="nc" id="L210">    }</span>
+
+    public void showLoginScreen() {
+        loop: while(true) {
+
+<span class="nc" id="L215">            System.out.println(&quot;enter username:-&quot;);</span>
+<span class="nc" id="L216">            System.out.print(&quot;&gt;&gt;&quot;);</span>
+<span class="nc" id="L217">            String username = scanner.nextLine();</span>
+<span class="nc" id="L218">            System.out.println(&quot;enter password:-&quot;);</span>
+<span class="nc" id="L219">            System.out.print(&quot;&gt;&gt;&quot;);</span>
+<span class="nc" id="L220">            String password = scanner.nextLine();</span>
+
+<span class="nc" id="L222">            String msg = app.attemptLogin(username, password);</span>
+<span class="nc bnc" id="L223" title="All 5 branches missed.">            switch (msg) {</span>
+                case &quot;login successfully&quot; -&gt; {
+<span class="nc" id="L225">                    app.Login(username,&quot;user&quot;);</span>
+<span class="nc" id="L226">                    break loop;</span>
+                }
+                case &quot;logged in as admin&quot; -&gt;{
+<span class="nc" id="L229">                    app.Login(username,&quot;admin&quot;);</span>
+<span class="nc" id="L230">                    break loop;</span>
+                }
+<span class="nc" id="L232">                case &quot;wrong password&quot; -&gt; System.out.println(&quot;Incorrect password, try again &quot;);</span>
+<span class="nc" id="L233">                case &quot;wrong username&quot; -&gt; System.out.println(&quot;We cant find this user, try again&quot;);</span>
+<span class="nc" id="L234">                default -&gt; throw new IllegalArgumentException(&quot;Unexpected value: &quot; + msg);</span>
+            }
+<span class="nc" id="L236">        }</span>
+<span class="nc" id="L237">    }</span>
+
+    public void showAppointmentScreen(){
+
+<span class="nc" id="L241">        String tasks=&quot;&quot;&quot;</span>
+				***********************************
+				* What do you want to do?         *
+				* 1- Add appointment              *
+				* 2- Delete appointment           *
+				* 3- Update appointment           *
+				***********************************
+				&quot;&quot;&quot;;
+<span class="nc" id="L249">        System.out.println(tasks);</span>
+
+        loop:	while(true) {
+            try {
+<span class="nc" id="L253">                System.out.print(&quot;&gt;&gt;&quot;);</span>
+<span class="nc" id="L254">                int input = Integer.parseInt(scanner.nextLine());</span>
+
+<span class="nc bnc" id="L256" title="All 4 branches missed.">                switch (input) {</span>
+                    case 1 -&gt; {
+<span class="nc" id="L258">                        addAppointment();</span>
+<span class="nc" id="L259">                        break loop;</span>
+                    }
+                    case 2 -&gt; {
+                        //deleteAppointment();
+<span class="nc" id="L263">                        break loop;</span>
+                    }
+                    case 3 -&gt; {
+                        //updateAppointment();
+<span class="nc" id="L267">                        break loop;</span>
+                    }
+<span class="nc" id="L269">                    default -&gt; System.out.println(&quot;please enter appointment valid input&quot;);</span>
+                }
+<span class="nc" id="L271">            } catch (InputMismatchException e) {</span>
+
+<span class="nc" id="L273">                System.out.println(&quot;please enter appointment valid input&quot;);</span>
+
+<span class="nc" id="L275">            }</span>
+        }
+
+
+<span class="nc" id="L279">    }</span>
+
+    private void addAppointment() {
+
+        	while(true) {
+
+<span class="nc" id="L285">            showWorkers();</span>
+<span class="nc" id="L286">            System.out.println(&quot;Choose worker&quot;);</span>
+<span class="nc" id="L287">            System.out.print(&quot;&gt;&gt; &quot;);</span>
+<span class="nc" id="L288">            int workerIndex = Integer.parseInt(scanner.nextLine());</span>
+<span class="nc" id="L289">            Admin Admin = app.db.admins.get(workerIndex-1);</span>
+
+<span class="nc" id="L291">            System.out.println(&quot;Enter month (like: yy-mm-dd)&quot;);</span>
+<span class="nc" id="L292">            System.out.print(&quot;&gt;&gt; &quot;);</span>
+<span class="nc" id="L293">            String date =scanner.nextLine();</span>
+
+<span class="nc bnc" id="L295" title="All 2 branches missed.">            if(!checkValidDate(date)){</span>
+<span class="nc" id="L296">                System.out.println(&quot;invalid date&quot;);</span>
+<span class="nc" id="L297">                continue;</span>
+            }
+
+<span class="nc" id="L300">                LocalDate Date = createDate(date);</span>
+
+<span class="nc" id="L302">                System.out.println(&quot;Enter time (like: '10 am' or '12 pm' from 7 am to 5 pm)&quot;);</span>
+<span class="nc" id="L303">            System.out.print(&quot;&gt;&gt; &quot;);</span>
+<span class="nc" id="L304">            String time = scanner.nextLine();</span>
+
+<span class="nc bnc" id="L306" title="All 2 branches missed.">            if(!checkValidTime(time)){</span>
+<span class="nc" id="L307">                System.out.println(&quot;invalid time&quot;);</span>
+<span class="nc" id="L308">                continue;</span>
+            }
+
+
+<span class="nc" id="L312">                LocalTime Time = createTime(time);</span>
+
+<span class="nc" id="L314">                Appointment appointment=new Appointment();</span>
+<span class="nc" id="L315">            appointment.setId(5);</span>
+<span class="nc" id="L316">            appointment.setDate(Date);</span>
+<span class="nc" id="L317">            appointment.setTime(Time);</span>
+<span class="nc" id="L318">            appointment.setUser(app.LoggedUser);</span>
+<span class="nc" id="L319">            appointment.setAdmin(Admin);</span>
+<span class="nc" id="L320">            app.db.appointments.add(appointment);</span>
+<span class="nc" id="L321">            break;</span>
+
+        }
+
+
+<span class="nc" id="L326">    }</span>
+
+    public LocalTime createTime(String time) {
+<span class="fc" id="L329">        String[] splitTime = time.trim().split(&quot; &quot;);</span>
+<span class="fc" id="L330">        int hour =Integer.parseInt(splitTime[0]);</span>
+<span class="fc" id="L331">        int minute=0;</span>
+<span class="fc" id="L332">        return LocalTime.of(hour,minute);</span>
+    }
+
+    public LocalDate createDate(String date) {
+<span class="fc" id="L336">        String[] splitDate = date.trim().split(&quot;-&quot;);</span>
+<span class="fc" id="L337">        int day =  Integer.parseInt(splitDate[2]);</span>
+<span class="fc" id="L338">        int month = Integer.parseInt(splitDate[1]);</span>
+<span class="fc" id="L339">        int year = Integer.parseInt(splitDate[0]);</span>
+<span class="fc" id="L340">        return LocalDate.of(year,month,day);</span>
+    }
+
+    private void showWorkers() {
+<span class="nc" id="L344">        int number=1;</span>
+<span class="nc bnc" id="L345" title="All 2 branches missed.">        for(Admin w: app.db.admins){</span>
+<span class="nc" id="L346">            System.out.println(number+&quot;- &quot;+w.getUsername());</span>
+<span class="nc" id="L347">            number++;</span>
+<span class="nc" id="L348">        }</span>
+<span class="nc" id="L349">    }</span>
+    public boolean checkValidDate(String date) {
+<span class="fc" id="L351">        String[] Date = date.trim().split(&quot;-&quot;);</span>
+<span class="fc" id="L352">        int day =  Integer.parseInt(Date[2]);</span>
+<span class="fc" id="L353">        int month = Integer.parseInt(Date[1]);</span>
+<span class="fc" id="L354">        int year = Integer.parseInt(Date[0]);</span>
+
+<span class="pc bpc" id="L356" title="1 of 4 branches missed.">        if(day &lt; 1 || day &gt; 31 )</span>
+<span class="fc" id="L357">            return false;</span>
+<span class="pc bpc" id="L358" title="1 of 4 branches missed.">        else if( month &lt; 1 || month &gt; 12)</span>
+<span class="fc" id="L359">            return false;</span>
+<span class="pc bpc" id="L360" title="1 of 2 branches missed.">        else return year &gt;= 2022;</span>
+    }
+
+    public boolean checkValidTime(String time) {
+<span class="fc" id="L364">        String[] Time = time.split(&quot; &quot;);</span>
+<span class="fc" id="L365">        int hour = Integer.parseInt(Time[0]);</span>
+
+<span class="fc bfc" id="L367" title="All 2 branches covered.">        if(Time[1].equals(&quot;am&quot;))</span>
+<span class="fc bfc" id="L368" title="All 4 branches covered.">            return hour &gt;= 7 &amp;&amp; hour &lt;= 11;</span>
+<span class="pc bpc" id="L369" title="1 of 2 branches missed.">        else if(Time[1].equals(&quot;pm&quot;))</span>
+<span class="pc bpc" id="L370" title="2 of 6 branches missed.">            return hour == 12 || (hour &gt;= 1 &amp;&amp; hour &lt;= 5);</span>
+        else
+<span class="nc" id="L372">            return false;</span>
+
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

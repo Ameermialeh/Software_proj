@@ -1,0 +1,8 @@
+myPackage\Admin.class
+myPackage\Appointment.class
+myPackage\Generator.class
+myPackage\DataBase.class
+myPackage\Service.class
+myPackage\User.class
+myPackage\GUI.class
+myPackage\App.class

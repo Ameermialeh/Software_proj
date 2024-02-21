@@ -1,0 +1,6 @@
+TestSteps\UserRegisterSteps.class
+TestSteps\invoiceSteps.class
+TestSteps\VisitSteps.class
+TestSteps\AppointmentSteps.class
+TestSteps\AcceptanceTest.class
+TestSteps\UserLoginSteps.class

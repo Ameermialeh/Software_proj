@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="29" failures="0" name="TestSteps.AcceptanceTest" time="0.367" errors="0" skipped="0">
+  <properties>
+    <property name="jansi.mode" value="force"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="17.0.4.1+1"/>
+    <property name="sun.boot.library.path" value="C:\Users\Ameer\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20220903-1038\jre\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Ameer\git\SWP"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\Ameer\git\SWP"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="17.0.4.1+1"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\Ameer\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="D:\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf701299429187455490.tmp"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Users\Ameer\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20220903-1038\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/Ameer/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20220903-1038/jre/bin/server;C:/Users/Ameer/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20220903-1038/jre/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\xampp\mysql\bin;C:\Program Files\Java\jdk-17.0.5;D:\Git\cmd;C:\Program Files\apache-maven-3.8.6\bin;C:\Users\Ameer\AppData\Local\Microsoft\WindowsApps;C:\Users\Ameer\AppData\Local\GitHubDesktop\bin;D:\vscode\Microsoft VS Code\bin;D:\xampp\php;C:\Users\Ameer\AppData\Local\ComposerSetup\bin;C:\Users\Ameer\AppData\Roaming\Composer\vendor\bin;C:\WINDOWS\system32;;."/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\Ameer"/>
+    <property name="user.timezone" value="Asia/Hebron"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="17"/>
+    <property name="user.name" value="Ameer"/>
+    <property name="java.class.path" value="C:\Users\Ameer\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.601.20220820-1147\jars\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -Dstyle.color=always clean jacoco:prepare-agent install jacoco:report"/>
+    <property name="java.home" value="C:\Users\Ameer\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20220903-1038\jre"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="17.0.4.1"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="maven.home" value="C:\Users\Ameer\git\SWP\EMBEDDED"/>
+    <property name="style.color" value="always"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2022-08-12"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.vendor.version" value="Temurin-17.0.4.1+1"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="appointments and visits for the customer" name="Add appointment" time="0.175"/>
+  <testcase classname="appointments and visits for the customer" name="Fail appointment already exist" time="0.005"/>
+  <testcase classname="appointments and visits for the customer" name="Fail Add appointment wrong date #1" time="0.008"/>
+  <testcase classname="appointments and visits for the customer" name="Fail Add appointment wrong date #2" time="0.008"/>
+  <testcase classname="appointments and visits for the customer" name="Fail Add appointment wrong date #3" time="0.008"/>
+  <testcase classname="appointments and visits for the customer" name="Fail Add appointment wrong date #4" time="0.016"/>
+  <testcase classname="appointments and visits for the customer" name="Fail Add appointment wrong date #5" time="0.007"/>
+  <testcase classname="appointments and visits for the customer" name="Fail Add appointment wrong date #6" time="0.006"/>
+  <testcase classname="appointments and visits for the customer" name="Fail Add appointment wrong time #1" time="0.006"/>
+  <testcase classname="appointments and visits for the customer" name="Fail Add appointment wrong time #2" time="0.006"/>
+  <testcase classname="appointments and visits for the customer" name="Fail Add appointment wrong time #3" time="0.006"/>
+  <testcase classname="appointments and visits for the customer" name="Fail Add appointment wrong time #4" time="0.006"/>
+  <testcase classname="appointments and visits for the customer" name=": success Delete the appointment" time="0.006"/>
+  <testcase classname="appointments and visits for the customer" name=": Success update for Appointment" time="0.006"/>
+  <testcase classname="appointments and visits for the customer" name=": Fail update for Appointment #1" time="0.006"/>
+  <testcase classname="appointments and visits for the customer" name=": Fail update for Appointment #2" time="0.01"/>
+  <testcase classname="appointments and visits for the customer" name=": Fail update for Appointment #3" time="0.008"/>
+  <testcase classname="appointments and visits for the customer" name=": Fail update for Appointment #4" time="0.007"/>
+  <testcase classname="login" name="user login successfully" time="0.011"/>
+  <testcase classname="login" name="user enters wrong username" time="0.006"/>
+  <testcase classname="login" name="user enters wrong password" time="0.005"/>
+  <testcase classname="login" name="admin login successfully" time="0.005"/>
+  <testcase classname="Register" name="user create account successfully" time="0.006"/>
+  <testcase classname="Register" name="user enters used username" time="0.006"/>
+  <testcase classname="Register" name="user enters used email" time="0.005"/>
+  <testcase classname="Register" name="user enters used phone" time="0.005"/>
+  <testcase classname="invoice" name="billing" time="0.007"/>
+  <testcase classname="invoice" name="no visit" time="0.005"/>
+  <testcase classname="convert appointment to visit" name="user arrives at clinic" time="0.006"/>
+</testsuite>
